@@ -1,0 +1,40 @@
+#api call for listing appointments 
+###
+GET http://127.0.0.1:8000/v1/appointments/
+Accept: application/json
+
+#api call for adding appointments
+###
+POST http://127.0.0.1:8000/v1/appointments/
+Content-Type: application/json
+
+{
+    "name":"yuvan",
+    "phone":"1234567890",
+    "email":"yuvan@gmail.com",
+    "blood_test_type":"Complete Blood Count(CBC)",
+    "appointment_date":"2026-10-07"
+
+
+}
+
+#api call for fetching appointments detail
+### 
+GET http://127.0.0.1:8000/v1/appointments/1/
+Accept: application/json
+
+#api call for updating appointments detail
+### 
+PUT http://127.0.0.1:8000/v1/appointments/1/
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"yuvan",
+    "phone":"1234567890",
+    "email":"yuvan@gmail.com",
+    "blood_test_type":"Complete Blood Count(CBC)",
+    "status":"pending",
+    "appointment_date":"2026-10-07"
+}
+
